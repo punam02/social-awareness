@@ -1,6 +1,6 @@
 from rest_framework import generics
 from .serializers import CampaignSerializer
-from .models import Campaign, UserCampaign
+from .models import Campaign
 
 
 class CampaignView(generics.ListAPIView):
@@ -8,9 +8,7 @@ class CampaignView(generics.ListAPIView):
     serializer_class = CampaignSerializer
 
 
-class UserCampaignView(generics.CreateAPIView):
-    queryset = UserCampaign.objects.all()
-    serializer_class = CampaignSerializer
+
 
 
 
