@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 function Header() {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,23 +26,23 @@ function Header() {
                     <ul className="md:flex space-x-12 hidden">
                         <li><a href="/" className="block text-base hover:text-gray-300">Home</a></li>
                         <li><a href="/campaigns/home" className="block text-base hover:text-gray-300">Campaigns</a></li>
-                        <li><a href="/business" className="block text-base hover:text-gray-300">Create Campaign</a></li>
+                        <li><a href="#" className="block text-base hover:text-gray-300">Create Campaign</a></li>
                     </ul>
                 </div>
 
                 {/* Desktop Login and Registration */}
                 <div className="space-x-12 hidden md:flex items-center text-base">
-                    <a href="/campaigns/login" className="hidden lg:flex items-center hover:text-gray-300">
+                    <Link to="login" className="hidden lg:flex items-center hover:text-gray-300">
                         <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" height="1em" width="1em">
                             <path d="M399 384.2C376.9 345.8 335.4 320 288 320H224c-47.4 0-88.9 25.8-111 64.2c35.2 39.2 86.2 63.8 143 63.8s107.8-24.7 143-63.8zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256 16a72 72 0 1 0 0-144 72 72 0 1 0 0 144z" />
                         </svg>
                         <span className="px-1">Login</span>
-                    </a>
-                    <a href="/campaigns/signup">
+                    </Link>
+                    <Link to="signup">
                         <button className="text-white py-2 px-5 transition-all duration-300 rounded hover:text-[#eee] bg-indigo-600">
                             Registration
                         </button>
-                    </a>
+                    </Link>
                 </div>
 
                 {/* Mobile Menu Button */}

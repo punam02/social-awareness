@@ -25,7 +25,16 @@ SECRET_KEY = 'django-insecure-vo7192gju)$xz&=m$0$nozv71&08=0yth)7(g9d=#0u#b94d+a
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+
 ALLOWED_HOSTS = []
+
+CORS_ALLOW_CREDENTIALS = True
+
+CORS_ALLOW_ORIGINS = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000",
+]
+
 
 
 # Application definition
@@ -129,3 +138,17 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+## User model
+AUTH_USER_MODEL = 'campaigns.AppUser'
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.SessionAuthentication',
+    ),
+}
