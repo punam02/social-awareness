@@ -1,10 +1,14 @@
 import React from 'react';
+import Header from './HeaderComponent';
+
+
+
 
 function App() {
-  console.log('!!!!!!')
   return (
     <div>
-     hello
+      {/* Header Component */}
+      <Header />
     </div>
   );
 }
