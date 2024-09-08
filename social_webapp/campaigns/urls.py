@@ -1,5 +1,5 @@
 from django.urls import path 
-from .views import CampaignListView,CampaignCreateView, CampaignListView
+from .views import CampaignListView,CampaignCreateView, CampaignListView, CampaignDetailView
 from django.conf import settings
 from django.conf.urls.static import static
 from . import views
@@ -14,7 +14,8 @@ urlpatterns = [
     
 	path('create-campaign/', CampaignCreateView.as_view(), name='create-campaign'),
     path('home/', CampaignListView.as_view(), name='campaigns'),
-    path('update/<uuid:pk>/', views.update_campaign, name='update-campaign'),
+    path('update-campaign/<uuid:pk>/', views.update_campaign, name='update-campaign'),
+    path('campaign-detail/<uuid:pk>/', CampaignDetailView.as_view(), name='campaign-detail'),
 
 ]
 

@@ -49,14 +49,14 @@ const CampaignsList = () => {
                             <p className="text-gray-700 mb-4">{truncateDescription(campaign.description)}</p>
                             <div className="flex justify-between">
                                 <Link
-                                    to={`/campaigns/${campaign.id}/view`}
+                                    to={`/campaign-detail/${campaign.id}/view`}
                                     className="text-blue-500 hover:underline"
                                 >
                                     View Details
                                 </Link>
                                 <div className="flex space-x-2">
                                     <Link
-                                        to={`/update/${campaign.id}`}
+                                        to={`campaigns/update-campaign/${campaign.id}`}
                                         className="text-yellow-500 hover:underline"
                                     >
                                         Update
