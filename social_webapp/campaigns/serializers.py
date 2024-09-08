@@ -33,6 +33,16 @@ class UserSerializer(serializers.ModelSerializer):
         
 
 class CampaignSerializer(serializers.ModelSerializer):
+	
+	main_image = serializers.ImageField(use_url=True) 
+    
+	class Meta:
+		model = Campaign
+		fields = ('id', 'title', 'main_image', 'description', 'start_date', 'end_date', 'status')
+
+
+
+class CreateCampaignSerializer(serializers.ModelSerializer):
     class Meta:
         model = Campaign
-        fields = '__all__'
+        fields = ('id', 'title', 'main_image', 'description', 'start_date', 'end_date', 'status')

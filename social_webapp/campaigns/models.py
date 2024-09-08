@@ -33,7 +33,7 @@ class Campaign(models.Model):
         default='pending',
         help_text="Current status of the campaign"
     )
-    creator = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
 
     def __str__(self):
         return self.title

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
-import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
 
 axios.defaults.xsrfCookieName = 'csrftoken';
 axios.defaults.xsrfHeaderName = 'X-CSRFToken';
@@ -111,7 +110,9 @@ function Header() {
                         <ul className="md:flex space-x-12 hidden">
                             <li><a href="/" className="block text-base hover:text-gray-300">Home</a></li>
                             <li><a href="/campaigns/home" className="block text-base hover:text-gray-300">Campaigns</a></li>
-                            <li><a href="#" className="block text-base hover:text-gray-300">Create Campaign</a></li>
+                            <li>
+                                <Link to="/create-campaign" className="block text-base hover:text-gray-300">Create Campaign</Link>
+                            </li>
                         </ul>
                     </div>
 
@@ -211,10 +212,10 @@ function Header() {
                                 <li><a href="/campaigns" className="text-base hover:text-gray-300">Campaigns</a></li>
                             </ul>
                         </div>
-                        
+
                         <Button id="form_btn" onClick={update_form_btn} variant="light">Register/login</Button>
-                           
-                    
+
+
                     </div>
                 )}
             </nav>
@@ -225,8 +226,8 @@ function Header() {
                         <Form onSubmit={e => submitRegistration(e)} className="w-full max-w-lg space-y-6 bg-white p-8 shadow-lg rounded-lg">
                             {/* Email Address Field */}
                             <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <h1 className="text-2xl font-bold text-center mb-6">Register</h1>
-                            <Form.Label className="block text-gray-700 text-sm font-bold mb-2">Email address</Form.Label>
+                                <h1 className="text-2xl font-bold text-center mb-6">Register</h1>
+                                <Form.Label className="block text-gray-700 text-sm font-bold mb-2">Email address</Form.Label>
                                 <Form.Control
                                     type="email"
                                     placeholder="Enter email"
@@ -276,7 +277,7 @@ function Header() {
                 ) : (
                     <div className="flex justify-center items-center min-h-screen">
                         <Form onSubmit={e => submitLogin(e)} className="w-full max-w-lg space-y-6 bg-white p-8 shadow-lg rounded-lg">
-                        <h1 className="text-2xl font-bold text-center mb-6">Login</h1>
+                            <h1 className="text-2xl font-bold text-center mb-6">Login</h1>
 
                             {/* Email Address Field */}
                             <Form.Group className="mb-3" controlId="formBasicEmail">
