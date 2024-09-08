@@ -1,7 +1,3 @@
-Here’s a well-structured README file for your Social Awareness Web Application:
-
----
-
 # Social Awareness Web Application
 
 ## Overview
