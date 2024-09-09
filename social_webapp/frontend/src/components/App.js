@@ -7,16 +7,10 @@ import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-d
 
 function App() {
   return (
-    <Router>
+    <div>
       <HomePage />
-      <Routes>
-        <Route path="/create-campaign" element={<CreateCampaign />} />
-        <Route path="/update-campaign/:id" element={<UpdateCampaign />} />
-        <Route path="/campaign-detail/:id" element={<CampaignDetail />} />
-      </Routes>
-      
-      
-    </Router>
+    </div>
+   
   );
 }
 

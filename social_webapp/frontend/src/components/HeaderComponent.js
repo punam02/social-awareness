@@ -108,8 +108,8 @@ function Header() {
 
                         {/* Desktop Menu */}
                         <ul className="md:flex space-x-12 hidden">
-                            <li><a href="/" className="block text-base hover:text-gray-300">Home</a></li>
-                            <li><a href="/campaigns/home" className="block text-base hover:text-gray-300">Campaigns</a></li>
+                            <li><a href="/campaigns" className="block text-base hover:text-gray-300">Home</a></li>
+                            <li><a href="/campaigns" className="block text-base hover:text-gray-300">Campaigns</a></li>
                             <li>
                                 <Link to="/create-campaign" className="block text-base hover:text-gray-300">Create Campaign</Link>
                             </li>
